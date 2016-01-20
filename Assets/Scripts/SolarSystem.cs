@@ -1,18 +1,45 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
 
-public class SolarSystem {
+public class SolarSystem
+{
 
-    public int x;
-    public int y;
-    public List<SolarSystem> neighbours;
+  public int x;
+  public int y;
+  public List<SolarSystem> neighbours;
+  public int starType;
 
-    private int m_numPlanets;
+  public static string[] s_starTypes = { "White Dwarf", "Red Giant", "Yellow Dwarf", "Blue Giant" };
 
-    public SolarSystem( int _numPlanets )
+  private int m_numPlanets;
+  private Planet[] m_planets;
+
+  public SolarSystem()
+  {
+    neighbours = new List<SolarSystem>();
+
+    starType = Random.Range(0, s_starTypes.Length);
+    m_numPlanets = Random.Range(3, 8);
+    m_planets = new Planet[m_numPlanets];
+
+    GeneratePlanets();
+  }
+
+  // Test Function
+  public string DebugSystem()
+  {
+    return ("Number of planets: " + m_numPlanets + ", Type of star: " + s_starTypes[starType]);
+  }
+
+  public void GeneratePlanets()
+  {
+    // Start by generating distance of each planet from sun
+
+
+    for (int i = 0; i < m_numPlanets; ++i)
     {
-        m_numPlanets = _numPlanets;
-        neighbours = new List<SolarSystem>();
+      m_planets[i] = new Planet();
     }
+  }
 
 }
