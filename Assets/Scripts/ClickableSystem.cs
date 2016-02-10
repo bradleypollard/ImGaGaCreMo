@@ -4,6 +4,7 @@ using System.Collections;
 public class ClickableSystem : MonoBehaviour {
 
   public SolarSystem system;
+  public GameLogic logic;
 
 	void OnMouseOver()
   {
@@ -15,6 +16,9 @@ public class ClickableSystem : MonoBehaviour {
       {
         Debug.Log(p.DebugPlanet());
       }
+
+      // Zoom trigger
+      logic.ZoomOnSystem(system, transform);
     }
   }
 }

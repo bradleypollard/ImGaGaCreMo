@@ -175,6 +175,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   solarSystemParent: {fileID: 1868459680}
   pathParent: {fileID: 1406118756}
+  zoomScale: 15
   solarSystem: {fileID: 152334, guid: 61f224c13c385784483a6fec4b6c4a26, type: 2}
   path: {fileID: 189606, guid: eae247caad3c3c946955f4f1993175c4, type: 2}
   starMaterials:
@@ -182,6 +183,8 @@ MonoBehaviour:
   - {fileID: 2100000, guid: d0f7b358ec9cfde4792c2602f630083e, type: 2}
   - {fileID: 2100000, guid: 15d3fc4b109619442b3e98141a8aab15, type: 2}
   - {fileID: 2100000, guid: 1b566be191674b24fb034433545e74cf, type: 2}
+  transparentMaterial: {fileID: 2100000, guid: 52ecc57dabcd1c94aad3e24850070948, type: 2}
+  pathMaterial: {fileID: 2100000, guid: 6f817d41822745d45a6a146424fd7469, type: 2}
 --- !u!4 &621004621
 Transform:
   m_ObjectHideFlags: 0
@@ -216,7 +219,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1406118756}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.7883053, y: -1.4771023, z: 4.9694815}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
